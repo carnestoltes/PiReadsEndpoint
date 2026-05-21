@@ -13,18 +13,18 @@
 
 ## System Architecture
 
-![Architecture](~/img/architecture.png)
+![Image](~/img/architecture.png)
 
-/**
-* ```mermaid
-* flowchart TD
-* A[Camera image] --> B[Find display / screen region]
-* B --> C[Perspective correction] --> |crop and straighten| D[Resize to standard size]
-* D --> E[OCR / digit detection]
-* E --> F[Parse values]
-* F --> G[GET /values] --> |JSON| H[Client]
-* ```
-*/
+<!--
+```mermaid
+ flowchart TD
+  A[Camera image]  B[Find display / screen region]
+  B  C[Perspective correction]  |crop and straighten| D[Resize to standard size]
+  D  E[OCR / digit detection]
+  E  F[Parse values]
+  F  G[GET /values]  |JSON| H[Client]
+```
+-->
 ## Software Stack
 
 - Python
