@@ -13,7 +13,7 @@
 
 ## System Architecture
 
-![Image](~/img/architecture.png)
+![Architecture](img/architecture.png)
 
 <!--
 ```mermaid
