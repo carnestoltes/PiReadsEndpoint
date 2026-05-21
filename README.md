@@ -17,7 +17,7 @@
 flowchart TD
 
 A[Camera image] --> B[Find display / screen region]
-B --> C[Perspective correction "(crop + straighten)"]
+B --> C[Perspective correction] --> |crop + straighten|
 C --> D[Resize to standard size]
 D --> E[OCR / digit detection]
 E --> F[Parse values]
@@ -27,7 +27,7 @@ F --> G[GET /values] --> |JSON|
 ## Software Stack
 
 - Python
-- ![OpenCV](https://opencv.org/)
-- ![Tesseract OCR](https://tesseract-ocr.github.io/)
-- ![FastAPI](https://fastapi.tiangolo.com/)
+- [OpenCV](https://opencv.org/)
+- [Tesseract OCR](https://tesseract-ocr.github.io/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 
