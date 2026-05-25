@@ -1,0 +1,12 @@
+{
+  "capture_interval": 1.0,
+  "ocr_mode": "tesseract",
+
+  "labels": {
+    "temperature": ["TEMP", "TEMPERATURE"],
+    "pressure": ["PRESS", "PRESSURE"],
+    "flow": ["FLOW"],
+    "rpm": ["RPM"],
+    "status": ["STATUS"]
+  }
+}
