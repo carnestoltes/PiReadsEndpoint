@@ -23,7 +23,7 @@ An intelligent Edge Computing gateway designed for automated legacy equipment di
 ## Data Pipeline Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph Capture_Layer [Capture Layer]
         A[Pi Camera Module] -->|Raw Image Capture| B[Image Ingestion Service]
     end
