@@ -44,3 +44,4 @@ flowchart TD
         H -->|GET /values | I[Structured JSON Payload]
         I --> J[Remote Enterprise / Cloud Clients]
     end
+```
