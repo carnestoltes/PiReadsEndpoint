@@ -23,26 +23,25 @@ An intelligent Edge Computing gateway designed for automated legacy equipment di
 ## Data Pipeline Architecture
 
 ```mermaid
-
- flowchart TD
-    subgraph Capture Layer
+flowchart TD
+    subgraph Capture_Layer [Capture Layer]
         A[Pi Camera Module] -->|Raw Image Capture| B[Image Ingestion Service]
     end
 
-    subgraph Edge Preprocessing Layer (OpenCV)
+    subgraph Preprocessing_Layer [Edge Preprocessing Layer OpenCV]
         B --> C[Display/Screen Region Detection]
         C --> D[Perspective Warp Correction]
         D -->|Crop & Straighten| E[Adaptive Thresholding & Resizing]
     end
 
-    subgraph Inference & Extraction Layer (Tesseract)
+    subgraph Inference_Layer [Inference & Extraction Layer Tesseract]
         E --> F[OCR / Digit Detection Engine]
         F --> G[Data Parsing & Validation]
     end
 
-    subgraph Exposure & Transport Layer
+    subgraph Transport_Layer [Exposure & Transport Layer]
         G --> H[FastAPI Core Server]
-        H -->|GET /values | I[Structured JSON Payload]
+        H -->|GET /values| I[Structured JSON Payload]
         I --> J[Remote Enterprise / Cloud Clients]
     end
 ```
